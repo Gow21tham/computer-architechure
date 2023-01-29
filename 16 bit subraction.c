@@ -1,0 +1,17 @@
+MOV SI,1200H
+LODSW
+MOV BX,AX
+LODSW
+SUB BX,AX
+MOV DI,1300H
+MOV [DI],BX
+HLT
+
+
+INPUT:
+1200   08H                  1201  08H
+1202   04H                  1203   04H
+
+OUTPUT:
+1300   04H
+1301   04H
